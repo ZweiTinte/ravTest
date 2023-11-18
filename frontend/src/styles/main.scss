@@ -1,0 +1,42 @@
+$white1: #dadada;
+
+body {
+  background-color: #2f2f2f;
+  font-family: "Ubuntu";
+  color: $white1;
+  font-size: 1rem;
+}
+
+.flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonArea {
+  margin-top: 15rem;
+}
+
+@media only screen and (max-height: 800px) {
+  .buttonArea {
+    margin-top: 1rem;
+  }
+}
+
+.defaultButton {
+  border-radius: 0.25rem;
+  border: 0.15rem solid #665c85;
+  outline: none;
+  background-color: #4f4f4f;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: $white1;
+  font-size: 1rem;
+  &:hover {
+    background-color: #524a6a;
+  }
+  &:focus {
+    border: 0.15rem solid $white1;
+  }
+}
