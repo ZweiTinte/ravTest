@@ -1,10 +1,25 @@
-$white1: #dadada;
+@import "_variables";
+@import "_mixins";
 
 body {
   background-color: #2f2f2f;
   font-family: "Ubuntu";
   color: $white1;
   font-size: 1rem;
+  margin: 0;
+}
+
+.sidebar {
+  border-right: 0.15rem solid #665c85;
+  background-color: #4f4f4f;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 10rem;
+  height: 100vh;
+  gap: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
 }
 
 .flex-col-center {
@@ -14,29 +29,37 @@ body {
   flex-direction: column;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .buttonArea {
   margin-top: 15rem;
+  padding: 1rem;
+  width: calc(100vw - 20rem);
+  margin-left: 12rem;
 }
 
 @media only screen and (max-height: 800px) {
   .buttonArea {
-    margin-top: 1rem;
+    padding: 1rem;
+    width: calc(100vw - 20rem);
+    margin-left: 12rem;
   }
 }
 
 .defaultButton {
-  border-radius: 0.25rem;
-  border: 0.15rem solid #665c85;
-  outline: none;
-  background-color: #4f4f4f;
-  cursor: pointer;
-  padding: 0.5rem;
-  color: $white1;
-  font-size: 1rem;
-  &:hover {
-    background-color: #524a6a;
-  }
-  &:focus {
-    border: 0.15rem solid $white1;
-  }
+  @include defaultButton;
+}
+
+.defaultLinkButton {
+  @include defaultButton;
+  text-decoration: none;
+}
+
+.tablePage {
+  padding: 1rem;
+  margin-left: 12rem;
+  max-width: calc(100% - 12rem);
 }

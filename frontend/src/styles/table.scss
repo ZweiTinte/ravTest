@@ -1,0 +1,54 @@
+@import "_variables";
+@import "_mixins";
+
+.tableArea {
+  border-radius: 0.25rem;
+  border: 0.15rem solid #665c85;
+  background-color: #4f4f4f;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondRow {
+  background-color: $darkTableRow;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+th {
+  text-transform: capitalize;
+}
+
+tr {
+  cursor: pointer;
+}
+
+.paginationArea {
+  padding: 0.5rem;
+  background-color: $darkTableRow;
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.paginationButton {
+  @include defaultButton;
+  min-width: 2.5rem;
+}
+
+.paginationButtonActive {
+  cursor: not-allowed;
+  background-color: $buttonHover;
+}
+
+.openEntryRow {
+  border-radius: 0.4rem;
+  border: 0.15rem dashed #7e72a4;
+}

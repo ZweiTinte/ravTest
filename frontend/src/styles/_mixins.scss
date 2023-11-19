@@ -1,0 +1,18 @@
+@import "_variables";
+
+@mixin defaultButton {
+  border-radius: 0.25rem;
+  border: 0.15rem solid #665c85;
+  outline: none;
+  background-color: #4f4f4f;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: $white1;
+  font-size: 1rem;
+  &:hover {
+    background-color: buttonHover;
+  }
+  &:focus {
+    border: 0.15rem solid $white1;
+  }
+}
