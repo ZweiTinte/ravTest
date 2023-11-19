@@ -2,9 +2,8 @@
 @import "_mixins";
 
 .tableArea {
-  border-radius: 0.25rem;
-  border: 0.15rem solid #665c85;
-  background-color: #4f4f4f;
+  @include defaultBorder;
+  background-color: $defaultBackground;
   display: flex;
   flex-direction: column;
 }

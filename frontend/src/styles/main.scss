@@ -10,8 +10,8 @@ body {
 }
 
 .sidebar {
-  border-right: 0.15rem solid #665c85;
-  background-color: #4f4f4f;
+  border-right: 0.15rem solid $defaultBorder;
+  background-color: $defaultBackground;
   display: flex;
   flex-direction: column;
   position: fixed;

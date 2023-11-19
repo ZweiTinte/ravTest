@@ -1,10 +1,14 @@
 @import "_variables";
 
-@mixin defaultButton {
+@mixin defaultBorder {
   border-radius: 0.25rem;
-  border: 0.15rem solid #665c85;
+  border: 0.15rem solid $defaultBorder;
+}
+
+@mixin defaultButton {
+  @include defaultBorder;
   outline: none;
-  background-color: #4f4f4f;
+  background-color: $defaultBackground;
   cursor: pointer;
   padding: 0.5rem;
   color: $white1;
